@@ -1,0 +1,28 @@
+# Novel Pipeline 配置模板
+# 复制为 config.yaml 后填入你的 API Key
+
+llm:
+  # 任何 OpenAI 兼容接口都可以：
+  #   DeepSeek:   https://api.deepseek.com/v1
+  #   OpenAI:     https://api.openai.com/v1
+  #   Ollama:     http://localhost:11434/v1   (api_key 随便填)
+  #   vLLM:       http://localhost:8000/v1
+  base_url: "https://api.deepseek.com/v1"
+  api_key: "sk-your-key-here"
+  model: "deepseek-chat"
+  temperature: 0.8
+  max_tokens: 4000
+  timeout: 120
+
+novel:
+  title: "星海拾荒者"
+  genre: "科幻"
+  premise: "一个在废弃空间站捡垃圾的少年，意外唤醒了一台失忆的军用 AI"
+  style: "冷峻克制，带一点黑色幽默"
+  chapters: 5
+  words_per_chapter: 1200
+  language: "zh-CN"
+
+pipeline:
+  resume: true
+  output_dir: "output"
